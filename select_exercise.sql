@@ -1,3 +1,5 @@
+use codeup_test_db
+
 # SELECT 'Albums by Pink Floyd' AS 'Description: ';
 #
 # SELECT Name
