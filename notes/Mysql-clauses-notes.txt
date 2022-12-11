@@ -1,0 +1,31 @@
+Where clause
+
+✅This query will select all first names with the letter combination 'sus':
+SELECT first_name
+FROM employees
+WHERE first_name LIKE '%sus%';
+
+✅avoid getting duplicate values:
+SELECT DISTINCT first_name
+FROM employees
+WHERE first_name LIKE '%sus%';
+
+use WHERE with BETWEEN to find specific ranges of values:
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE emp_no BETWEEN 10026 AND 10082;
+
+WHERE with IN to query only very specific sets of values:
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name IN ('Herber', 'Dredge', 'Lipner', 'Baek');
+
+
+
+
+
+
+
+
+
+
