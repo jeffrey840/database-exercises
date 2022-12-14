@@ -1,0 +1,51 @@
+TABLES
+
+Numeric Types
+int/float/decimal
+
+String Types
+CHAR(length)/VARCHAR(length)/TEXT
+
+Date Types
+DATE:YYYY-MM-DD/TIME:24-hour/DATETIME:YYYY-MM-DD HH:MM:SS
+
+✅Creating Tables:
+CREATE TABLE table_name (
+    column1_name data_type,
+    column2_name data_type,
+    ...
+);
+
+✅Showing Tables:
+SHOW TABLES;
+
+✅Describing Tables:
+DESCRIBE quotes;
+
+✅display the original command used to create a table:
+SHOW CREATE TABLE quotes\G;
+
+✅Dropping Tables:
+DROP TABLE quotes;
+or
+DROP TABLE IF EXISTS quotes;
+or
+CREATE TABLE IF NOT EXISTS quotes (
+    ...
+);
+
+✅To run the script, use the following command:
+mysql -u USERNAME -p -t < filename.sql
+
+
+
+
+
+
+
+
+
+
+
+
+
