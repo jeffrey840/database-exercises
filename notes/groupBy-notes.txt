@@ -1,0 +1,35 @@
+Group By
+
+✅Using the GROUP BY clause:
+SELECT column FROM table GROUP BY column_name;
+
+✅GROUP BY returns only the unique occurrences:
+SELECT DISTINCT first_name
+FROM employees;
+or
+SELECT first_name
+FROM employees
+GROUP BY first_name;
+or
+SELECT last_name, first_name
+FROM employees
+GROUP BY last_name, first_name;
+
+COUNT
+
+✅how many rows were in our employees table total:
+SELECT COUNT(*) FROM employees;
+
+✅only concerned about the values in a given column:
+SELECT COUNT(first_name)
+FROM employees
+WHERE first_name NOT LIKE '%a%';
+
+✅Using GROUP BY with Aggregate Functions:
+        This query will output each unique first name without an 'a', as well as the number of employees with that first name:
+SELECT first_name, COUNT(first_name)
+FROM employees
+WHERE first_name NOT LIKE '%a%'
+GROUP BY first_name;
+
+

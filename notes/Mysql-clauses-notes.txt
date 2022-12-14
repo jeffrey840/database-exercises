@@ -1,4 +1,4 @@
-Where clause
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 Where clause 🟨🟨🟨🟨🟨🟨🟨🟨🟨
 
 ✅This query will select all first names with the letter combination 'sus':
 SELECT first_name
@@ -20,12 +20,30 @@ SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name IN ('Herber', 'Dredge', 'Lipner', 'Baek');
 
+✅Chaining WHERE clauses:
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name IN ('Herber','Baek')
+  AND emp_no < 20000;
 
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 Order by 🟨🟨🟨🟨🟨🟨🟨🟨🟨
 
+✅ORDER BY clause normally follow this form:
+SELECT column FROM table ORDER BY column_name [ASC|DESC];
 
+✅Chaining ORDER BY clauses:
+SELECT first_name, last_name
+FROM employees
+ORDER BY last_name DESC, first_name ASC;
 
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 LIMIT 🟨🟨🟨🟨🟨🟨🟨🟨🟨
 
+✅a LIMIT clause follows this form:
+SELECT columns FROM table LIMIT count [OFFSET count];
 
-
-
+✅Adding an OFFSET tells MySQL which row to start with:
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE first_name LIKE 'M%'
+LIMIT 25 OFFSET 50;
 

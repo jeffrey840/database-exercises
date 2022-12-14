@@ -1,0 +1,46 @@
+
+✅functions
+CONCAT:
+SELECT CONCAT('Hello ', 'Codeup', '!');
+
+✅LIKE:
+SELECT first_name
+FROM employees
+WHERE first_name LIKE '%sus%';
+
+✅NOT LIKE:
+SELECT DISTINCT first_name
+FROM employees
+WHERE first_name NOT LIKE '%a%';
+
+✅DAY or DAYOFMONTH:
+SELECT DAYOFMONTH('1990-05-03');
+-- Will return 3
+
+✅SELECT DAY('2017-03-25');
+-- Will return 25
+
+✅MONTH:
+SELECT MONTH('2008-02-03');
+-- Will return 2
+
+✅YEAR:
+ SELECT YEAR('1987-01-01');
+-- Will return 1987
+
+✅NOW:
+SELECT NOW();
+
+✅CURDATE:
+SELECT CURDATE();
+
+✅CURTIME:
+SELECT CURTIME();
+
+✅UNIX_TIMESTAMP() & UNIX_TIMESTAMP(date):
+SELECT CONCAT(
+    'Teaching people to code for ',
+    UNIX_TIMESTAMP() - UNIX_TIMESTAMP('2014-02-04'),
+    ' seconds'
+);
+

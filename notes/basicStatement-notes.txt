@@ -1,0 +1,53 @@
+
+✅Insert:
+INSERT INTO table_name (field1, field2, ...)
+VALUES ('value1', 'value2', ...);
+
+✅SQL Quotes:
+INSERT INTO quotes (author_first_name, author_last_name, content)
+VALUES ('Douglas', 'Adams', 'Don''t Panic.');
+
+✅Select:
+SELECT column1, column2, ... FROM table_name;
+or
+SELECT * FROM quotes;
+
+✅Where Clause:
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name = 'value';
+
+✅fastest and most precise way to find:
+SELECT * FROM quotes WHERE id = 5;
+
+✅Operators:
+=	Equal
+!= or <>	Not equal
+<	Less than
+>	Greater than
+<=	Less than or equal to
+>=	Greater than or equal to
+BETWEEN value1 AND value2	Greater than or equal to value1 and less than or equal to value2
+
+✅Miscellaneous Output:
+SELECT 'I am output!' AS 'Info';
+
+✅Update:
+UPDATE table_name
+SET column1 = 'value1', column2 = 'value2', ...
+WHERE columnA = 'valueA';
+
+✅Delete:
+DELETE FROM table_name WHERE column_name = 'value';
+or
+DELETE FROM quotes WHERE id = id_num;
+
+✅Caution:
+Always write your WHERE condition first.
+Whenever possible, DELETE using the table's primary key.
+
+✅Truncate:
+remove all the records from a table.
+TRUNCATE table_name;
+
+
