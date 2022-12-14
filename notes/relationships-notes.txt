@@ -1,0 +1,84 @@
+
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 INDEXES 🟨🟨🟨🟨🟨🟨🟨🟨🟨
+Typically we add the PRIMARY KEY index on our id column, along with AUTO_INCREMENT:
+CREATE TABLE quotes (
+    id INT NOT NULL AUTO_INCREMENT,
+    author VARCHAR(50) NOT NULL,
+    content VARCHAR(240) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+We can use the ALTER statement to update a table.
+ALTER TABLE quotes
+ADD UNIQUE (content);
+
+author's first and last name to be unique:
+CREATE TABLE authors (
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE (first_name, last_name)
+);
+
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 JOINS 🟨🟨🟨🟨🟨🟨🟨🟨🟨
+
+Join Syntax :
+SELECT columns
+FROM table_a as A
+JOIN table_b as B ON A.id = B.fk_id;
+
+Join / Inner Join:
+SELECT users.name as user_name, roles.name as role_name
+FROM users
+JOIN roles ON users.role_id = roles.id;
+
+Left Join:
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+LEFT JOIN roles ON users.role_id = roles.id;
+
+Right Join:
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+RIGHT JOIN roles ON users.role_id = roles.id;
+
+Associative Tables and Joins:
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name, d.dept_name
+FROM employees as e
+JOIN dept_emp as de
+  ON de.emp_no = e.emp_no
+JOIN departments as d
+  ON d.dept_no = de.dept_no
+WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001;
+
+Using Subqueries:
+SELECT column_a, column_b, column_c
+FROM table_a
+WHERE column_a IN (
+    SELECT column_a
+    FROM table_b
+    WHERE column_b = true
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
