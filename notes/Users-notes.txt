@@ -1,0 +1,26 @@
+
+✅Finding the Current User
+mysql> SELECT current_user;
+
+✅Listing Users
+SELECT user, host FROM mysql.user;
+
+✅Creating a User
+CREATE USER 'billy'@'localhost' IDENTIFIED BY 'billysSecretP@ass123';
+or
+CREATE USER 'sally'@'192.168.77.1' IDENTIFIED BY 'passwordForSally321';
+
+✅grant all privileges on all databases and tables to a user
+GRANT ALL ON *.* TO 'billy'@'localhost';
+
+✅user sally to only be able to SELECT, INSERT, UPDATE, and DELETE from a single table called sallys_table inside sally_db:
+GRANT SELECT, INSERT, UPDATE, DELETE ON sally_db.sallys_table TO 'sally'@'localhost';
+
+✅current privileges to a specific user:
+SHOW GRANTS for 'username'@'hostname';
+
+✅Dropping a User
+DROP USER 'sally'@'localhost';
+
+
+
