@@ -1,0 +1,71 @@
+
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 One-to-Many 🟨🟨🟨🟨🟨🟨🟨🟨🟨
+
+quotes:
+id	first_name	last_name	content
+1	Douglas     Adams	    I love deadlines. I love the whooshing
+                            noise they make as they go by.
+2	Douglas 	Adams	    Don't Panic.
+3	Douglas	    Adams	    Time is an illusion. Lunchtime doubly so.
+4	Mark	    Twain	    Clothes make the man. Naked people have
+                            little or no influence osociety.
+5	Kurt	    Vonnegut	The universe is a big place, perhaps the biggest.
+
+
+authors:
+id	first_name	last_name
+1	Douglas	    Adams
+2	Mark	    Twain
+3	Kurt	    Vonnegut
+
+quotes:
+id	author_id	content
+1	    1	    I love deadlines. I love the whooshing noise they make as they go by.
+2	    1	    Don't Panic.
+3	    1	    Time is an illusion. Lunchtime doubly so.
+4	    2	    Clothes make the man. Naked people have little or no influence on society.
+5	    3	    The universe is a big place, perhaps the biggest.
+
+🟨🟨🟨🟨🟨🟨🟨🟨🟨 Many-to-Many 🟨🟨🟨🟨🟨🟨🟨🟨🟨
+
+topics:
+id	name
+1	Space and Time
+2	Humor
+3	Office Life
+4	Hitchhiker's Guide to the Galaxy
+
+quotes:
+id	author_id	content
+1	    1	    I love deadlines. I love the whooshing noise                  they make as they go by.
+2	    1	    Don't Panic.
+3	    1	    Time is an illusion. Lunchtime doubly so.
+4	    2	    Clothes make the man. Naked people have little                or no influence on society.
+5	    3	    The universe is a big place, perhaps the                      biggest.
+
+quote_topic:
+quote_id	topic_id
+1	            2
+1	            3
+2	            4
+3	            1
+3	            2
+3	            3
+3	            4
+4	            2
+5	            1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
